@@ -1,14 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>My Blog</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <header>
+    <div class="header-inner">
+      <h1 class="site-title">My Blog</h1>
+      <nav>
+        <a href="#" onclick="showView('list')">홈</a>
+        <a href="#" onclick="showView('write')">글쓰기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 글 목록 -->
+    <section id="view-list">
+      <h2>최근 글</h2>
+      <div id="post-list"></div>
+    </section>
+
+    <!-- 글 상세 -->
+    <section id="view-detail" class="hidden">
+      <button class="back-btn" onclick="showView('list')">← 목록으로</button>
+      <article id="post-detail"></article>
+    </section>
+
+    <!-- 글쓰기 -->
+    <section id="view-write" class="hidden">
+      <h2>새 글 작성</h2>
+      <form id="post-form">
+        <input type="text" id="input-title" placeholder="제목을 입력하세요" required />
+        <textarea id="input-content" placeholder="내용을 입력하세요" rows="10" required></textarea>
+        <div class="form-actions">
+          <button type="button" onclick="showView('list')">취소</button>
+          <button type="submit">게시하기</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
