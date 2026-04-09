@@ -3,47 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Blog</title>
-  <link href='/style.css' rel='stylesheet'>
+  <title>VFX Academy — Game Visual Effects School</title>
+  <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <h1 class="site-title">My Blog</h1>
-      <nav>
-        <a href="#" onclick="showView('list')">홈</a>
-        <a href="#" onclick="showView('write')">글쓰기</a>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="logo">VFX<span class="logo-accent">Academy</span></span>
+      <nav class="nav-links">
+        <a href="#about">소개</a>
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#instructor">강사</a>
+        <a href="#apply" class="btn-nav">수강 신청</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- 글 목록 -->
-    <section id="view-list">
-      <h2>최근 글</h2>
-      <div id="post-list"></div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Game Visual Effects</p>
+      <h1 class="hero-title">게임 VFX,<br>20주로 완성하다</h1>
+      <p class="hero-sub">
+        10년 이상 현업 시니어 강사진과 함께,<br>
+        합리적인 가격으로 프로페셔널 게임 이펙트를 배웁니다.
+      </p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn-primary">수강 신청하기</a>
+        <a href="#curriculum" class="btn-ghost">커리큘럼 보기</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- 글 상세 -->
-    <section id="view-detail" class="hidden">
-      <button class="back-btn" onclick="showView('list')">← 목록으로</button>
-      <article id="post-detail"></article>
-    </section>
-
-    <!-- 글쓰기 -->
-    <section id="view-write" class="hidden">
-      <h2>새 글 작성</h2>
-      <form id="post-form">
-        <input type="text" id="input-title" placeholder="제목을 입력하세요" required />
-        <textarea id="input-content" placeholder="내용을 입력하세요" rows="10" required></textarea>
-        <div class="form-actions">
-          <button type="button" onclick="showView('list')">취소</button>
-          <button type="submit">게시하기</button>
+  <!-- HIGHLIGHTS -->
+  <section class="highlights" id="about">
+    <div class="container">
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <span class="hl-num">20</span>
+          <span class="hl-unit">주</span>
+          <p class="hl-desc">체계적인 단계별<br>완성형 커리큘럼</p>
         </div>
-      </form>
-    </section>
-  </main>
+        <div class="highlight-card">
+          <span class="hl-num">10</span>
+          <span class="hl-unit">년+</span>
+          <p class="hl-desc">게임 업계 실무<br>시니어 강사 경력</p>
+        </div>
+        <div class="highlight-card">
+          <span class="hl-num">1:1</span>
+          <span class="hl-unit"></span>
+          <p class="hl-desc">매주 적극적인<br>개인 피드백 제공</p>
+        </div>
+        <div class="highlight-card">
+          <span class="hl-num">↓</span>
+          <span class="hl-unit"></span>
+          <p class="hl-desc">업계 최저 수준의<br>합리적인 수강료</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script defer type="text/javascript" src="/main.js"></script>
+  <!-- CURRICULUM -->
+  <section class="curriculum" id="curriculum">
+    <div class="container">
+      <h2 class="section-title">커리큘럼</h2>
+      <p class="section-sub">20주 동안 기초부터 포트폴리오 완성까지</p>
+      <div class="week-list">
+        <div class="week-group">
+          <div class="week-label">1–4주</div>
+          <div class="week-content">
+            <strong>VFX 기초 이론</strong>
+            <p>파티클 시스템 원리, 셰이더 기초, 색채·빛 표현 이론</p>
+          </div>
+        </div>
+        <div class="week-group">
+          <div class="week-label">5–8주</div>
+          <div class="week-content">
+            <strong>툴 실전 활용</strong>
+            <p>Unreal Engine / Unity VFX Graph 심화, 노드 기반 이펙트 제작</p>
+          </div>
+        </div>
+        <div class="week-group">
+          <div class="week-label">9–12주</div>
+          <div class="week-content">
+            <strong>장르별 이펙트</strong>
+            <p>스킬 이펙트, 환경 이펙트, 타격감 표현, UI 이펙트 제작</p>
+          </div>
+        </div>
+        <div class="week-group">
+          <div class="week-label">13–16주</div>
+          <div class="week-content">
+            <strong>최적화 & 실무</strong>
+            <p>모바일/PC 퍼포먼스 최적화, 실무 파이프라인, 협업 워크플로우</p>
+          </div>
+        </div>
+        <div class="week-group">
+          <div class="week-label">17–20주</div>
+          <div class="week-content">
+            <strong>포트폴리오 제작</strong>
+            <p>개인 프로젝트 기획부터 완성까지, 강사 1:1 피드백 집중 진행</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTOR -->
+  <section class="instructor" id="instructor">
+    <div class="container">
+      <h2 class="section-title">강사 소개</h2>
+      <div class="instr-card">
+        <div class="instr-avatar">VFX</div>
+        <div class="instr-info">
+          <h3>10년+ 현업 시니어 VFX 아티스트</h3>
+          <p>
+            국내외 대형 게임 스튜디오에서 10년 이상 실무를 경험한 시니어 VFX 아티스트가 직접 강의합니다.
+            AAA 타이틀 다수 참여 경력을 바탕으로, 현장에서 즉시 쓸 수 있는 실전 기술을 전달합니다.
+          </p>
+          <ul class="instr-tags">
+            <li>AAA 게임 다수 참여</li>
+            <li>Unreal / Unity 전문</li>
+            <li>실무 파이프라인 경험</li>
+            <li>적극적 1:1 피드백</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback-section">
+    <div class="container feedback-inner">
+      <h2>매주, 당신의 작업에<br>직접 피드백합니다</h2>
+      <p>
+        단순 강의 시청에서 끝나지 않습니다. 매주 제출한 과제에 강사가 직접 코멘트를 달고,
+        개선 방향을 함께 잡아갑니다. 혼자서는 보이지 않던 문제점을 빠르게 해결할 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="apply" id="apply">
+    <div class="container apply-inner">
+      <h2 class="section-title">수강 신청</h2>
+      <p class="section-sub">지금 바로 시작하세요. 합리적인 가격, 높은 퀄리티.</p>
+      <form class="apply-form" onsubmit="handleApply(event)">
+        <input type="text" placeholder="이름" required />
+        <input type="email" placeholder="이메일" required />
+        <select>
+          <option value="">수강 과정 선택</option>
+          <option>VFX 기초 과정 (20주)</option>
+          <option>VFX 심화 과정 (20주)</option>
+        </select>
+        <textarea placeholder="문의 사항 (선택)" rows="4"></textarea>
+        <button type="submit" class="btn-primary">신청하기</button>
+      </form>
+      <p id="apply-msg" class="apply-msg hidden">신청이 완료되었습니다. 빠른 시일 내 연락드리겠습니다.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <span class="logo">VFX<span class="logo-accent">Academy</span></span>
+      <p>© 2026 VFX Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
 </body>
 </html>
